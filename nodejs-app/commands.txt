@@ -1,0 +1,10 @@
+Databasename: mongo
+
+collectionname: test-node
+
+db.createCollection("test-node", {capped: true,   size: 5242880,  max: 10000,})
+
+export MONGODB_URI=mongodb://localhost:27017/mongo
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "joe", "Age": "28"}' http://localhost:3000
